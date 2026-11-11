@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 { font-family: 'Outfit', sans-serif; }
+
+@layer base {
+    :root {
+        --background: 60 20% 98%;
+        --foreground: 222 47% 11%;
+        --card: 0 0% 100%;
+        --card-foreground: 222 47% 11%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 222 47% 11%;
+        --primary: 222 47% 11%;
+        --primary-foreground: 60 20% 98%;
+        --secondary: 75 12% 95%;
+        --secondary-foreground: 222 47% 11%;
+        --muted: 75 12% 95%;
+        --muted-foreground: 215 16% 47%;
+        --accent: 75 12% 93%;
+        --accent-foreground: 222 47% 11%;
+        --destructive: 347 77% 50%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 90 7% 88%;
+        --input: 90 7% 88%;
+        --ring: 221 83% 53%;
+        --brand: 221 83% 53%;
+        --amber: 32 95% 44%;
+        --radius: 0.75rem;
+    }
+    .dark {
+        --background: 222 42% 6%;
+        --foreground: 210 40% 98%;
+        --card: 221 39% 11%;
+        --card-foreground: 210 40% 98%;
+        --popover: 221 39% 11%;
+        --popover-foreground: 210 40% 98%;
+        --primary: 210 40% 98%;
+        --primary-foreground: 222 47% 11%;
+        --secondary: 215 28% 17%;
+        --secondary-foreground: 210 40% 98%;
+        --muted: 215 28% 17%;
+        --muted-foreground: 218 11% 65%;
+        --accent: 215 28% 17%;
+        --accent-foreground: 210 40% 98%;
+        --destructive: 350 89% 60%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 217 19% 22%;
+        --input: 217 19% 27%;
+        --ring: 217 91% 60%;
+        --brand: 217 91% 60%;
+        --amber: 38 92% 50%;
+    }
+}
+
+@layer base {
+    * { @apply border-border; }
+    body { @apply bg-background text-foreground; transition: background-color .3s ease; }
+    ::selection { background: hsl(var(--brand) / .25); }
+}
+
+@layer base {
+    [data-debug-wrapper="true"] { display: contents !important; }
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit; margin-right: inherit; margin-top: inherit; margin-bottom: inherit;
+        padding-left: inherit; padding-right: inherit; padding-top: inherit; padding-bottom: inherit;
+        column-gap: inherit; row-gap: inherit; gap: inherit;
+        border-left-width: inherit; border-right-width: inherit; border-top-width: inherit; border-bottom-width: inherit;
+        border-left-style: inherit; border-right-style: inherit; border-top-style: inherit; border-bottom-style: inherit;
+        border-left-color: inherit; border-right-color: inherit; border-top-color: inherit; border-bottom-color: inherit;
+    }
+}

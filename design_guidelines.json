@@ -1,0 +1,153 @@
+{
+  "project_name": "TripGallery (Galeria Colaborativa Privada e Segura para Viagens e Eventos)",
+  "language_default": "pt",
+  "supported_languages": ["pt", "en", "es"],
+  "archetype": "ARCHETYPE 1: ORGANIC & EARTHY / SWISS MINIMALIST",
+  "theme_strategy": "Light mode default with dark mode toggle. High contrast typography, warm sand and deep ocean blue/slate tones, tactile borders, clear visual hierarchy.",
+  "typography": {
+    "heading_font": "Cabinet Grotesk / Plus Jakarta Sans / Outfit (Sans-serif with character)",
+    "body_font": "Inter / DM Sans",
+    "mono_font": "JetBrains Mono / Space Mono (for EXIF dates, coordinates, token strings, file sizes)",
+    "hierarchy": {
+      "h1": "text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight",
+      "h2": "text-2xl sm:text-3xl font-bold tracking-tight",
+      "h3": "text-xl sm:text-2xl font-semibold",
+      "h4": "text-lg font-medium",
+      "body": "text-sm sm:text-base leading-relaxed",
+      "caption": "text-xs font-mono uppercase tracking-widest text-muted-foreground"
+    }
+  },
+  "colors": {
+    "light": {
+      "background": "#FBFBF9",
+      "surface": "#FFFFFF",
+      "surface_subtle": "#F3F4F1",
+      "border": "#E2E4DF",
+      "primary": "#0F172A",
+      "primary_accent": "#2563EB",
+      "secondary_accent": "#E11D48",
+      "warm_amber": "#D97706",
+      "success": "#059669",
+      "text_main": "#0F172A",
+      "text_muted": "#64748B"
+    },
+    "dark": {
+      "background": "#090D16",
+      "surface": "#111827",
+      "surface_subtle": "#1F2937",
+      "border": "#374151",
+      "primary": "#F8FAFC",
+      "primary_accent": "#3B82F6",
+      "secondary_accent": "#F43F5E",
+      "warm_amber": "#F59E0B",
+      "success": "#10B981",
+      "text_main": "#F8FAFC",
+      "text_muted": "#9CA3AF"
+    }
+  },
+  "layout_strategies": {
+    "dashboard_trips": "Bento style cards (3-column grid) with cover images, member avatars stack, media count badge, trip status (active/archived), dates, and privacy status.",
+    "gallery_timeline": "Timeline grouped by Day (e.g. 'Dia 1 - 12 de Outubro'), masonry image grid with dynamic aspect ratios,EXIF tag pills (GPS, Camera, ISO, Date), author avatar, and quick action bar (download, share, view details).",
+    "map_view": "Interactive Leaflet map container with custom pin popups showcasing media thumbnail, location name, EXIF timestamp, and link to scroll to timeline item.",
+    "upload_drawer": "Drag and drop zone, EXIF extraction preview (Date/Time, GPS coordinates), auto tag generation, progress bars, offline queue status with auto-sync indicator.",
+    "members_panel": "Stats bento box ('Top Contributor', 'Most Liked Photo', 'Golden Hour Master', 'Total MB Storage') + member table/cards with role management (Owner, Editor, Viewer) and revoke access action."
+  },
+  "key_features_and_components": {
+    "language_switcher": "Dropdown select or segmented pill switcher supporting PT (Português), EN (English), ES (Español) with automated translation dictionary & dynamic text updates.",
+    "dark_mode_toggle": "Sun/Moon button toggle persisting state in localStorage and toggling 'dark' class on <html>.",
+    "invite_modal": "Tokenized private link generator + real QR code renderer (using qrcode.react) + permissions selector (Pode visualizar / Pode enviar) + copy link button.",
+    "offline_queue": "Network status detector (navigator.onLine), persistent offline upload queue stored in IndexedDB/localStorage, floating banner indicating pending uploads ready for auto-sync on reconnect.",
+    "zip_download": "JSZip batch downloader organizing exported files by folders grouped by Day or Author."
+  },
+  "image_urls": {
+    "covers": [
+      {
+        "url": "https://images.pexels.com/photos/2422018/pexels-photo-2422018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Beach scene with misty mountain backdrop - Euro Trip 2026"
+      },
+      {
+        "url": "https://images.pexels.com/photos/369495/pexels-photo-369495.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Sunny beach & mountain scenery - Marmaris Summer"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1650964996661-d9267f282b25?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Rocky island with green foliage - Island Hopping"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1695206597675-eff02e38f746?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Lush green alpine valley - Swiss Alps Trek"
+      }
+    ],
+    "group_travelers": [
+      {
+        "url": "https://images.unsplash.com/photo-1584415965060-a5279d4d24c5?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Friends group at Golden Gate bridge"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "description": "Friends sitting on wall overlooking view"
+      },
+      {
+        "url": "https://images.pexels.com/photos/1116300/pexels-photo-1116300.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "description": "Young friends by serene lake"
+      }
+    ],
+    "avatars": [
+      {
+        "url": "https://images.unsplash.com/photo-1600486913747-55e5470d6f40?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "name": "Lucas Silva",
+        "role": "Organizador (Dono)"
+      },
+      {
+        "url": "https://images.unsplash.com/photo-1603989166244-3e8d9580204d?crop=entropy&cs=srgb&fm=jpg&q=85",
+        "name": "Camila Oliveira",
+        "role": "Fotógrafa Principal"
+      },
+      {
+        "url": "https://images.pexels.com/photos/39826588/pexels-photo-39826588.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "name": "Mariana Costa",
+        "role": "Membro"
+      },
+      {
+        "url": "https://images.pexels.com/photos/2604069/pexels-photo-2604069.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "name": "Gabriel Santos",
+        "role": "Membro"
+      }
+    ]
+  },
+  "required_data_testids": [
+    "app-header",
+    "language-switcher-select",
+    "dark-mode-toggle-btn",
+    "trips-dashboard-view",
+    "create-trip-btn",
+    "create-trip-modal",
+    "trip-card-item",
+    "trip-gallery-timeline",
+    "timeline-day-group",
+    "filter-search-input",
+    "filter-author-select",
+    "filter-day-select",
+    "upload-media-btn",
+    "upload-dialog-modal",
+    "offline-status-indicator",
+    "invite-members-btn",
+    "invite-qr-code",
+    "invite-link-copy-btn",
+    "media-card-item",
+    "media-lightbox-modal",
+    "media-exif-details",
+    "download-original-btn",
+    "batch-zip-download-btn",
+    "interactive-map-view",
+    "members-panel-view",
+    "member-remove-btn"
+  ],
+  "instructions_to_main_agent": [
+    "Make sure all files created are .js / .jsx compatible with the existing project setup.",
+    "Use lucide-react or @heroicons/react for clean minimalist travel icons.",
+    "Implement language dictionary object in src/locales/i18n.js supporting 'pt', 'en', 'es' and wrap UI text elements with translate helper t('key').",
+    "Ensure complete responsive layout with mobile bottom navigation bar or drawer for small screens.",
+    "Add testid attributes strictly matching the required_data_testids list to all main views and interactive controls."
+  ]
+}
